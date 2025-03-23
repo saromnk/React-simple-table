@@ -83,8 +83,8 @@ function UserTable() {
   };
 
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh', width: '100%' }}>
-      <Container sx={{ width: '100%', padding: '0 16px' }}> 
+    <Box sx={{ display: 'flex', alignItems: 'center', minHeight: '100vh', width: '100%' }}>
+      <Container maxWidth="md" sx={{ padding: '0 8px' }}> {/* Changed to maxWidth="md" and reduced padding */}
         <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
           <Box sx={{ marginBottom: 2, textAlign: 'right', width: tableWidth }}>
             <Button
@@ -96,7 +96,7 @@ function UserTable() {
             </Button>
           </Box>
           <Box sx={{ display: 'flex', width: '100%' }}>
-            <Box sx={{ width: '100%' }}> 
+            <Box sx={{ width: '100%' }}>
               <TableContainer
                 component={Paper}
                 sx={{ border: '1px solid #000', width: '100%' }}
@@ -105,8 +105,8 @@ function UserTable() {
                 <Table sx={{ width: '100%' }}>
                   <TableHead>
                     <TableRow>
-                      <TableCell sx={{ width: '80%', padding: '8px 8px', borderRight: '1px solid #ccc' }}>NAME</TableCell>
-                      <TableCell sx={{ width: '10%', padding: '8px 8px', textAlign: 'left', borderLeft: '1px solid #ccc' }}>ACTIONS</TableCell>
+                      <TableCell sx={{ width: '70%', padding: '8px', borderRight: '1px solid #ccc' }}>NAME</TableCell>
+                      <TableCell sx={{ width: '30%', padding: '8px', textAlign: 'left', borderLeft: '1px solid #ccc' }}>ACTIONS</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
@@ -119,8 +119,8 @@ function UserTable() {
                     ) : (
                       users.map((user, index) => (
                         <TableRow key={index} sx={{ minHeight: '60px' }}>
-                          <TableCell sx={{ width: '60%', padding: '8px 8px', borderRight: '1px solid #ccc' }}>{user.name}</TableCell>
-                          <TableCell sx={{ width: '10%', padding: '8px 8px', textAlign: 'left', borderLeft: '1px solid #ccc' }}> 
+                          <TableCell sx={{ width: '70%', padding: '8px 8px', borderRight: '1px solid #ccc' }}>{user.name}</TableCell>
+                          <TableCell sx={{ width: '30%', padding: '8px 8px', textAlign: 'left', borderLeft: '1px solid #ccc' }}>
                             <IconButton onClick={() => handleOpenDialog('edit', index)}>
                               <Edit />
                             </IconButton>

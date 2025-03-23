@@ -106,7 +106,7 @@ function UserTable() {
                   <TableHead>
                     <TableRow>
                       <TableCell sx={{ width: '70%', padding: '8px', borderRight: '1px solid #ccc' }}>NAME</TableCell>
-                      <TableCell sx={{ width: '30%', padding: '4px', textAlign: 'left', borderLeft: '1px solid #ccc' }}>ACTIONS</TableCell>
+                      <TableCell sx={{ width: '30%', padding: '4px', textAlign: 'center', borderLeft: '1px solid #ccc' }}>ACTIONS</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
@@ -120,7 +120,7 @@ function UserTable() {
                       users.map((user, index) => (
                         <TableRow key={index} sx={{ minHeight: '60px' }}>
                           <TableCell sx={{ width: '70%', padding: '8px 8px', borderRight: '1px solid #ccc' }}>{user.name}</TableCell>
-                          <TableCell sx={{ width: '30%', padding: '8px 8px', textAlign: 'left', borderLeft: '1px solid #ccc' }}>
+                          <TableCell sx={{ width: '30%', padding: '8px 8px', textAlign: 'center', borderLeft: '1px solid #ccc' }}>
                             <IconButton onClick={() => handleOpenDialog('edit', index)}>
                               <Edit />
                             </IconButton>

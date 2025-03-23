@@ -84,7 +84,7 @@ function UserTable() {
 
   return (
     <Box sx={{ display: 'flex', alignItems: 'center', minHeight: '100vh', width: '100%' }}>
-      <Container maxWidth="md" sx={{ padding: '0 8px' }}> {/* Changed to maxWidth="md" and reduced padding */}
+      <Container maxWidth="md" sx={{ padding: '0 8px' }}> 
         <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
           <Box sx={{ marginBottom: 2, textAlign: 'right', width: tableWidth }}>
             <Button
@@ -106,7 +106,7 @@ function UserTable() {
                   <TableHead>
                     <TableRow>
                       <TableCell sx={{ width: '70%', padding: '8px', borderRight: '1px solid #ccc' }}>NAME</TableCell>
-                      <TableCell sx={{ width: '30%', padding: '8px', textAlign: 'left', borderLeft: '1px solid #ccc' }}>ACTIONS</TableCell>
+                      <TableCell sx={{ width: '30%', padding: '4px', textAlign: 'left', borderLeft: '1px solid #ccc' }}>ACTIONS</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
